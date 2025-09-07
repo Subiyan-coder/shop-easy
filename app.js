@@ -4,8 +4,10 @@ const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('Welcome My Page!');
-});
+})
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
-});
+})
+
+module.exports = {app, server}
